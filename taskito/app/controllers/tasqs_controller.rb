@@ -13,13 +13,6 @@ class TasqsController < ApplicationController
   
   def create
     @tasq = Tasq.new(params[:tasq])
-    Bayeux.publish("/#{@tasq.project.name}", JSON.unparse(tasq))    
-    if @tasq.save
-      flash[:notice] = "Successfully created tasq."
-      redirect_to @tasq
-    else
-      render :action => 'new'
-    end
   end
   
   def edit
