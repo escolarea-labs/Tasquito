@@ -35,4 +35,5 @@ gem 'rake', '0.8.7'
 gem 'formtastic'
 gem 'faye'
 gem 'eventmachine'
+gem 'jquery-rails'
 #gem "mocha", :group => :test
