@@ -33,4 +33,6 @@ gem 'rake', '0.8.7'
 #   gem 'webrat'
 # end
 gem 'formtastic'
+gem 'faye'
+gem 'eventmachine'
 #gem "mocha", :group => :test
