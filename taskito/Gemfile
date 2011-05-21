@@ -36,4 +36,5 @@ gem 'formtastic'
 gem 'faye'
 gem 'eventmachine'
 gem 'jquery-rails'
+gem 'json'
 #gem "mocha", :group => :test

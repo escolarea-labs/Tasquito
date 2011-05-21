@@ -1,2 +1,5 @@
 To run, use thin
 thin start --rackup config.ru
+
+Ok, los siguientes pasos:
+a la hora de crear el task, hay que publicar 

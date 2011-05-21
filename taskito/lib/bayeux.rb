@@ -16,7 +16,7 @@ require 'eventmachine'
 require 'faye'
 
 module Bayeux
-  HOST = 'http://localhost:9292/faye'
+  HOST = 'http://localhost:3000/faye'
 
   class << self
     extend Forwardable

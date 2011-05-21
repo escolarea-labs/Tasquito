@@ -1,3 +1,13 @@
+<%content_for :head do %>
+  <script type="text/javascript">
+    $(function(){
+    var subscription = client.subscribe("/<%=@project.name%>", function(task){
+          $('#tasks').prepend("<li>"+task.text+"</li>")
+        })
+    })
+  </script>
+<%end%>
+
 <% title "Project" %>
 
 <p>
@@ -5,7 +15,7 @@
   <%= @project.name %>
 </p>
 
-<%= form_for @tasq do |f| %>
+<%= form_for @tasq, :remote=>true do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :name %><br />
@@ -14,7 +24,9 @@
  
   <p><%= f.submit  %></p>
 <% end %>
+<ol id = "tasks">
 
+</ol>
 <p>
   <%= link_to "Edit", edit_project_path(@project) %> |
   <%= link_to "Destroy", @project, :confirm => 'Are you sure?', :method => :delete %> |
